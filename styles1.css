@@ -1,0 +1,129 @@
+* {
+    box-sizing:
+  }
+  
+  h1,{font-weight:}
+  h2, h2{font-style: italic;}
+  h3 {font-weight:}
+  
+  body {padding:10px 
+    font-size:10px; 
+    line-height:1.5;
+    max-width:700px; 
+    margin: 0 auto; 
+    min-height:100px; 
+    color:#333; 
+    font-family:Arial, sans-serif;  }
+    
+    .container {  
+      position: relative;  
+      display: flex;  
+      align-items: flex-end;   
+      justify-content: flex-end;   
+      width: 300px;  
+      height: 300px;  
+      overflow: hidden;  
+      margin-left: auto;/*Left outer margin automatically centers the container horizontally*/   
+      margin-right: 0;  
+    }  
+      
+    .image {  
+      width: 100%;  
+      height: auto;  
+      flex-shrink: 0;   
+    }  
+      
+    .text {  
+      position:absolute;  
+      bottom: 10px;   
+      left: 10px;  
+      right: 10px; /*10px to the right of the container*/ 
+      padding: 10px; /*Inner margin 10px*/ 
+      background-color: rgba(20, 20, 20, 0.92);  
+      color: #fffefe;  
+      font-size: 14px;  
+      text-align: center; /*Align text center*/  
+    }   
+      }   
+  
+   img {max: width 500px;}
+  
+  .Header { text-align:center; 
+    border-bottom:1px solid #ffffff; 
+    margin-bottom:20px; 
+    padding-bottom:10px;}
+  
+  .Strap {font-size:14px}
+  
+  .MoneyShot { position: relative;}
+  
+  .MoneyShotImg { border:1px solid #ccc;/*Border is gray 1px solid line*/
+    border-radius:5px;}
+  
+  .LogoWrapper {  display:flex;/*Using Flex Layout*/
+    display: block;
+  }
+  
+  .ImageCaption {font-size:14px;
+    position:absolute; bottom: 10px; right:0px; padding: 5px; background-color:rgba(0, 0, 0, 0.5); color:white}
+  
+  .IntroText { font-size:16px;
+    font-style: italic;/*Font style is italicized*/ padding:10px;}
+  
+  .MethodWrapper li {padding:10px;
+    list-style-type:none; line: height 1.5em;}
+  
+  @media screen and (min-width: 800px) {
+    body {border-left:1px solid #ccc; 
+      border-right:1px solid #ccc;  padding:10px;}
+  
+    .IntroWrapper {display:flex
+      gap:10px; /*The gap between sub items is 10px*/ flex-wrap:wrap; align-items:center;}
+  
+    .MoneyShot,
+    .IntroText { margin: 20px;
+      flex:1;}
+  
+    .MoneyShotImg { filter: brightness(70%);
+      border: 1px solid #cccccc;}
+  
+    .IntroText {padding: 15px;
+      font-size:15px; text-align: justify; position:relative;}
+  
+      
+        
+      .Ingredients { 
+        position: absolute;/*Absolute positioning*/
+       right: 480px;
+        flex: 1;
+        margin-left: 20px; 
+        font-size: 14px;  
+        padding: 10px;  
+        margin: 10px;  
+        border-radius: 5px;  
+        background-color: rgb(224, 237, 32);  
+        border: 10px solid rgb(236, 167, 7);   
+        text-align: left;}/*Left aligned text*/
+        
+        .text-around-ingredients {  
+          margin-left: 150px; }
+  
+          .container {  
+            display: flex;  
+            margin: 20px;  
+        }  
+
+          .code-box {  
+            flex: 1;  
+            border: 1px solid #000;  
+            padding: 10px;  
+            margin-right: 20px;  
+            background-color: #f5f5f5;  
+            border-radius: 5px;  
+        }  
+      
+        .text-content {  
+            flex: 2;  
+
+    .Ingredients h3 {margin:margin: 0;}
+  }

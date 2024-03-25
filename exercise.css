@@ -1,0 +1,39 @@
+  
+  
+  
+h1 {  
+    color: hotpink; /*Set the title color to pink*/  
+    border-bottom: 10px dashed purple; /*Set a 10 pixel dashed line at the bottom of the title, with a color of purple*/  
+    text-align: center;  
+}  
+ p{ text-align: center;}   
+   
+    
+  h2 {  text-align: center;
+    font-style: italic; /*Change the second level title to italics*/  
+  }  
+    
+  /*Set the background color and border for the elements used for contact details in UL*/  
+  ul.contact-details {  
+    background-color: #eeeeee;   
+    border: 5px solid purple; /*Set a 5-pixel pure purple border*/  
+    padding: 10px;  
+  }
+
+  a:hover {  
+    color: green; /*Set the link color to green when hovering*/  
+  }  
+    
+    
+  .footer p { 
+    text-alig: center; /*Set paragraph center alignment*/  
+  }  
+    
+    
+  .centered {  
+    text-align: center; /*Set paragraph center alignment*/  
+  }
+  ul{ text-align: center;}
+  
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Center Button</title>  
+    <style>  
+        body, html {  
+            height: 100%;
+            margin: 0;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+        }  
+        :root {  
+            --background-color: #ffffff;   
+        }  
+
+        .button {  
+            padding: 10px 20px;  
+            font-size: 16px;  
+            color: white;  
+            background-color: #4CAF50;   
+            border: none;  
+            border-radius: 4px;  
+            cursor: pointer;  
+            transition: background-color 0.3s ease;/*Add transition effects*/
+        }
+        .button:hover {  
+            background-color: #e12e16; /*Deep red color during hovering*/  
+        }
+        .hidden {  
+            display: none; /*Hidden Elements*/  
+        }
+        .dialog {  
+            position: fixed;  
+            top: 50%;  
+            left: 50%;  
+            transform: translate(-50%, -50%);  
+            background-color: white;  
+            border: 1px solid #ccc;  
+            padding: 20px;   
+            z-index: 1000; /*Ensure that the dialog box is above other elements*/  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            text-align: center; /*Center text horizontally in the dialog box*/  
+        }
+  
+    </style>  
+</head>  
+<body>
+     
+    <button class="button"id="main-button">who is this</button>
+    <dialog id="dialog">
+                    <form method="dialog">
+                        <h1>How about this? A native Dialog.</h1>
+                        <p>So, only thing left to do is dismiss me.</p >
+                        <button value="Dismissed!">Dismiss Dialog</button>
+                    </form>
+                </dialog>
+    <script>  
+       //Listening window resizing event  
+        window.addEventListener('resize', function() {  
+            var windowWidth = window.innerWidth;  
+            var backgroundColor;  
+  
+            //Set different background colors based on window width  
+            if (windowWidth < 600) {  
+                backgroundColor = '#ff0000';   
+            } else if (windowWidth < 900) {  
+                backgroundColor = '#00ff00';  
+            } else {  
+                backgroundColor = 'yellow';   
+            }  
+  
+              
+            document.body.style.backgroundColor = backgroundColor;  
+        });  
+  
+          
+        window.dispatchEvent(new Event('resize'));  
+
+    
+      
+     var mainButton = document.getElementById('main-button');  
+     var popupButton = document.getElementById('popup-button');
+     var dialog;
+  //Listen for the click event of the main button  
+  mainButton.addEventListener('click', function() {  
+      //Hide Main Button 
+      this.style.display = 'none';
+
+      //Create dialog box elements  
+      dialog = document.createElement('div');  
+            dialog.classList.add('dialog');  
+            document.body.appendChild(dialog);  
+  
+            var textElement = document.createElement('p');  
+textElement.textContent = 'How about this? A native Dialog.So, only thing left to do is dismiss me.';  
+          
+  
+             
+            
+//Create a new button element 
+var popupButton = document.createElement('button');  
+popupButton.classList.add('button', 'popup-button');  
+popupButton.textContent = 'dismiss dialog';  
+  
+//Add a new button to the dialog box  
+dialog.appendChild(popupButton);
+            
+          //Add text elements to the dialog box  
+dialog.appendChild(textElement); 
+
+            document.body.appendChild(dialog); 
+
+       
+      popupButton.addEventListener('click', function() {  
+          //Remove dialog box 
+          dialog.remove();
+       //Show main button  
+          mainButton.style.display = 'block';
+        this.remove(); //Remove button elements  
+      });  
+  });      
+    </script>
+
+
+</body>
+</html>
